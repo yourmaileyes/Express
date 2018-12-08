@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS中国各大城市搜索框代码 - 源码之家</title>
+
+<link rel="stylesheet" href="css/cityselect.css">
+<style type="text/css">
+	.demo{width:220px;margin:50px auto;}
+	.demo input{padding: 12px 18px;}
+</style>
+
+</head>
+<body>
+<h3 style="text-align: center;margin-top: 15px;">在下面的输入框中输入城市的名称：</h3>
+<div class="demo">
+	<!-- 在输入框加入id -->
+	<input type="text" class="cityinput" id="citySelect" placeholder="请输入目的地">
+</div>
+
+<script type="text/javascript" src="js/cityselect.js"></script>
+<script type="text/javascript">
+	var test=new Vcity.CitySelector({input:'citySelect'});
+</script>
+
+<div style="text-align:center;">
+<p>来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+</div>
+
+</body>
+</html>

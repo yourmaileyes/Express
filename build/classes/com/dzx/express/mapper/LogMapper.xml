@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dzx.express.mapper.LogMapper" >
+  <resultMap id="BaseResultMap" type="com.dzx.express.entity.Log" >
+    <id column="logid" property="logid" jdbcType="INTEGER" />
+    <result column="expressid" property="expressid" jdbcType="VARCHAR" />
+    <result column="context" property="context" jdbcType="VARCHAR" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    logid, expressid, context, time, type
+  </sql>
+  <select id="selectlog" resultMap="BaseResultMap" parameterType="String">
+  select * from log
+  where expressid = #{expressid} order by time desc
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from log
+    where logid = #{logid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from log
+    where logid = #{logid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.dzx.express.entity.Log" >
+    insert into log (logid, expressid, context, 
+      time, type)
+    values (#{logid,jdbcType=INTEGER}, #{expressid,jdbcType=VARCHAR}, #{context,jdbcType=VARCHAR}, 
+      #{time,jdbcType=TIMESTAMP}, #{type,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dzx.express.entity.Log" >
+    insert into log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="logid != null" >
+        logid,
+      </if>
+      <if test="expressid != null" >
+        expressid,
+      </if>
+      <if test="context != null" >
+        context,
+      </if>
+      <if test="time != null" >
+        time,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="logid != null" >
+        #{logid,jdbcType=INTEGER},
+      </if>
+      <if test="expressid != null" >
+        #{expressid,jdbcType=VARCHAR},
+      </if>
+      <if test="context != null" >
+        #{context,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dzx.express.entity.Log" >
+    update log
+    <set >
+      <if test="expressid != null" >
+        expressid = #{expressid,jdbcType=VARCHAR},
+      </if>
+      <if test="context != null" >
+        context = #{context,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where logid = #{logid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dzx.express.entity.Log" >
+    update log
+    set expressid = #{expressid,jdbcType=VARCHAR},
+      context = #{context,jdbcType=VARCHAR},
+      time = #{time,jdbcType=TIMESTAMP},
+      type = #{type,jdbcType=VARCHAR}
+    where logid = #{logid,jdbcType=INTEGER}
+  </update>
+</mapper>

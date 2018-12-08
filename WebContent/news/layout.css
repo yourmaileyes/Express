@@ -1,0 +1,321 @@
+/*整站页面框架*/
+html{
+    overflow-x: hidden;
+}
+#layout {
+    position: relative;
+}
+#menu {
+    position: fixed;
+    left: 0;
+    width: 160px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    -webkit-overflow-scrolling: touch;
+    background: #202020;
+}
+#focus{
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    left: 160px;
+    top: 0;
+    bottom: 0;
+    background-color: #000410;
+}
+#main{
+    position:absolute;
+    z-index: 0;
+    margin-left:25%;
+    left: 160px;
+    width: 960px;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+
+
+/*二级页和三级页的公用框架*/
+.middle{
+    width: 1200px;
+    margin: 0 auto;
+}
+.main{
+    float: left;
+    width: 820px;
+}
+.aside{
+    float: right;
+    width: 300px;
+}
+.aside > div{
+    padding-top: 20px;
+}
+.aside .searchBig{font-size: 0; padding: 30px 15px;}
+.aside .searchBig input[type="text"]{
+    width: 230px;
+    *width: 220px;
+    font-size: 12px;
+    line-height: 28px;
+    *line-height: 24px;
+    padding:0 3px;
+    color: #dcdcdc;
+    background-color: #fafafa;
+    border: 1px solid #dcdcdc;
+    box-shadow: none;
+    border-radius: 5px;
+    float: left;
+    -moz-box-sizing : border-box ;
+    -webkit-box-sizing : border-box ;
+    box-sizing : border-box ;
+    height : 28px ;
+    *height : 24px ;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+}
+.aside .searchBig button[type="submit"]{
+    background: none;
+    padding: 0;
+    border: none;
+    width: 26px;
+    line-height: 28px;
+    height: 28px;
+    font-size: 24px;
+    text-align: right;
+    float: right;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+}
+.aside .searchBig input[type="text"]:focus, .aside .searchBig button[type="submit"]:focus{
+    outline: none;
+}
+.aside .searchBig input[type="text"]:focus{
+    border-color: #000;
+}
+/*视觉焦点*/
+.aside .sjjd{}
+.aside .sjjd ul li{
+    float: left;
+    width: 130px;
+    overflow: hidden;
+    margin-left: 13px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.aside .sjjd ul li .scale{
+    width: 130px;
+    height: 87px;
+    margin-bottom: 10px;
+}
+.aside .sjjd ul li .text{
+    font-size: 14px;
+    color: #333333;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+}
+.aside .sjjd ul li .text:hover{
+    text-decoration: underline;
+}
+.aside .videoRecommend{}
+.aside .videoRecommend .video{
+    width: 300px;
+    height: 225px;
+}
+.aside .videoRecommend .video em{
+    width: 280px;
+}
+.aside .hotArticle{}
+.aside .hotArticle .title, .iLike .title{
+    margin-bottom: 10px;
+}
+.aside .hotArticle ol li, .iLike ul li{
+    background: url("../images/dist.gif") no-repeat 0 11px;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+.aside .hotArticle ol li a, .iLike ul li a{
+    color: #333333;
+    font-size: 14px;
+    line-height: 26px;
+}
+.aside .hotArticle ol li a:hover, .iLike ul li a:hover{
+    text-decoration: underline;
+}
+/*二级页和3三级页的侧边栏结束*/
+
+@media screen and (min-width: 1441px){
+    #menu .bottom .radio .listPanel{visibility:visible !important; }
+    audio{display: none;}
+}
+@media screen and (max-width: 1440px){
+    #menu{width: 40px;}
+    #focus{left: 40px;}
+    #main{left: 40px;margin-left:25%;}
+    #menu ul.action li.search{display: inline-block !important;}
+    #menu .searchBig{display: none;}
+    audio{display: none;}
+
+    #menu ul.nav .cnrfont{display: none !important;}
+    #menu ul.nav li a strong{line-height: 32px !important;}
+    #menu h1 a.logoBig{display: none !important;}
+    /*#menu .search{display: inline-block !important;}*/
+
+
+    #menu .bottom .iconLink{display: block !important;}
+    #menu .bottom .friendLinks{display: none; position: absolute; right: -130px; bottom: -1px; background-color: #000;}
+    #menu .bottom .friendLinks ul{border-top: none !important;}
+    #menu .otherFriendLinks{display: none;}
+    #menu .bottom .radio .listPanel{position: absolute !important; bottom: 0; left: 40px; width: 120px !important; visibility: hidden;}
+    #menu .bottom .radio .listPanel .container{width: 120px !important;}
+    #menu .bottom .radio .listPanel .otherPlay{display: block !important;}
+    #menu .bottom .radio .control > li.noFix{display: block !important;}
+    #menu .bottom .radio .radioInfo{display: none !important;}
+    #menu .bottom .radio .control > li{width: 38px !important;}
+    #menu .bottom .radio .control > li:first-child{display: none !important;}
+    /*播放列表样式*/
+
+
+
+}
+@media screen and (max-width: 1280px){
+    #focus{display: none;}
+    #main{left: 40px;margin-left:0;}
+    audio{display: none;}
+
+
+
+
+    /*图片三级页*/
+    .page-title .left h2{font-size: 28px !important;}
+    #thumbs{display: none !important;}
+    div.right-bar{height: 100% !important;}
+    div.caption-container{height: 100% !important; background-color: #f0f0f0;}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 961px){
+    audio{display: none;}
+    #menu .bottom{background-image:none !important;}
+    .middle{width: 990px !important;}
+    .main{width: 640px !important;}
+    #main #footer .info{width: 920px !important;}
+    #menu .bottom .radio .control > li.noFix{display: block !important;}
+    /*三级页footer*/
+    #footer .info{width: 950px !important;}
+    .aboutLinks ul{padding-left: 0 !important;}
+    .aboutLinks ul li{padding-left: 15px !important;}
+    .article .articleMain .position{ right: -42px !important;}
+    .article .articleMain .position .shareSmall{display: block !important;}
+
+    /*图片三级页*/
+    .topLine .topLineInner .right{display: none;}
+    #thumbs{display: none !important;}
+    div.right-bar{height: 100% !important;}
+    div.caption-container{height: 100% !important; background-color: #f0f0f0;}
+
+    /*视频三级页*/
+    .page-title > div{width: 960px !important;}
+    .container-video{width: 1000px !important;}
+    .row3 .col{width: 320px !important; padding-left: 20px !important;}
+    .row3 .col:first-child{padding-left: 0 !important;}
+    .videoRow .right .video-list li .video-time{display: none;}
+    .videoRow .right .video-list li{padding: 24px 0 !important;}
+    .videoRow .right .video-list.less li{padding: 24px 0 !important;}
+}
+@media screen and (max-width: 768px){
+   audio{display: block;}
+    embed{display: none;}
+
+    html{transform-origin: left top;}
+    #menu{display: none;}
+    #main{left: 0 !important; position: relative !important; }
+
+    .middle{width: 100% !important;}
+    .main{width: 92% !important; margin: 0 4%; float: none !important;}
+    .breadcrumbOuter{display: none;}
+    #listPage.aside{display: none !important;}
+    .aside{float: none !important; width: 92% !important; margin: 0 4%;}
+    .aside .searchBig{display: none;}
+    .AD{display: none;}
+    .aside .videoRecommend{display: none;}
+    .article .subject{padding: 20px 0 !important; margin-bottom: 20px !important;}
+    .article .subject h2{font-size: 24px !important;}
+    .article .articleMain .position{display: none;}
+    .article .articleMain .content{width: 100% !important;}
+    .article .articleMain .content img{width: 100% !important;}
+    .topLine .topLineInner{width: 100% !important;}
+    .topLine .topLineInner .left .nav{display: none;}
+    .topLine .topLineInner .right .subNav li.subNav_menu{ display: block !important; }
+    .topLine .topLineInner .right .subNav li.subNav_email{ display: none; }
+    .topLine .topLineInner .right .subNav > li.sites{display: none;}
+    .topLine .topLineInner .right .subNav > li a{color: #fff !important;}
+    /*三级页footer*/
+    #footer .info{background-color: #202020; padding: 0 !important; width: 100% !important;}
+    #footer .info >div{display: none !important;}
+    #footer .info .copyright{display: block !important;}
+    .comments{display: none !important;}
+    .articleList{padding-left: 0 !important; padding-right: 0 !important; margin-top: 20px; margin-bottom: 20px; background:none !important;}
+    .articleList ul li{ padding: 15px 0 !important; height: 66px !important;}
+    .articleList ul li a.pic{margin-right: 10px !important;}
+    .articleList ul li a.pic img{width: 88px !important; height: 66px !important;}
+    .articleList ul li .text{height: 66px !important;}
+    .articleList ul li .text strong{margin-bottom: 10px !important; font-weight: normal; white-space:normal !important; line-height: 1.4;}
+    .articleList ul li .text strong a{font-size: 18px !important;}
+    .articleList ul li .text p{ height:38px !important; font-size: 14px !important; line-height: 19px !important; display: none;}
+    .articleList ul li .publishTime{display: none;}
+
+
+    /*图片三级页*/
+    .galleryPage{margin-bottom: 0 !important;}
+    .page-title .left h2{font-size: 24px !important; line-height: 1.4 !important; }
+    .page-title .right{display: none;}
+    .galleryPage div.content{position: relative !important; width: 100% !important; margin-left: 0 !important; left: 0 !important;}
+    .galleryPage div.slideshow-container{position: relative !important; right: 0 !important;}
+    .galleryPage{ height: auto !important;}
+    .galleryPage div.right-bar{float: none !important; width: 100% !important; padding-top: 20px;}
+    .galleryPage div.caption-container{height: 300px !important; width: 100% !important; margin-left: 0 !important;}
+    .galleryPage span.image-caption{width: auto !important; left: 0;}
+    .galleryPage div.nav-controls a{font-size: 14px !important; background-color: #b4b4b4; color: #fff !important; font-weight: normal !important; border-radius: 5px;}
+    #tuijian .center{width: 100% !important; height: auto !important; margin-top: 0 !important; margin-left: 0 !important; left: 0 !important; top: 0 !important; position: relative !important;}
+    #tuijian .pics{padding-bottom: 3% !important; padding-right: 3% !important;}
+    #tuijian .pics .pic{width: 47% !important; height: auto !important; margin-left: 3% !important; margin-top: 3% !important;}
+
+    /*文章页*/
+    .aboutLinks{margin-bottom: 30px !important;}
+    .aboutLinks ul{padding-left: 0 !important; background: none;}
+    .aboutLinks ul li{padding-top: 20px !important; padding-left: 15px !important;}
+    .aboutLinks ul li h2 a{font-size: 18px !important;}
+    .aboutLinks ul li p{font-size: 14px !important; line-height: 20px !important;}
+    .aboutLinks ul li div{padding-top: 10px !important;}
+    .aboutLinks ul li div span{font-size: 12px;}
+    .aside .sjjd ul li{width: 48% !important; margin-bottom: 15px !important;}
+    .aside .sjjd ul li:nth-child(odd){margin-left: 0 !important; }
+    .aside .sjjd ul li:nth-child(even){ margin-left: 4% !important; }
+    .aside .sjjd ul li .scale{width: 100% !important; height: auto !important; font-size: 0;}
+    /*.aside .sjjd ul li .scale img{width: 100% !important; height: auto !important;}*/
+    .aside > div:last-child{padding-bottom: 20px;}
+
+
+    /*翻页*/
+    .pagination .paginationMain{width: 100% !important;}
+    .pagination .paginationGoto{display: none !important;}
+
+
+    /*404页面*/
+    .f2f .logo, .f2f .gull1, .f2f .gull2, .f2f .fof, .f2f .sorry{ transform: scale(.5)}
+    .f2f .toCode{display: none;}
+
+
+}
+
+/*@media (min-aspect-ratio:16/10) {}*/
+
+
+
+
+

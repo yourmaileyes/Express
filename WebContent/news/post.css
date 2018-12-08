@@ -1,0 +1,137 @@
+.breadcrumbOuter{
+    padding: 34px 20px;
+}
+.article{
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 35px;
+}
+.article .subject{
+    padding:0 20px 40px;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 40px;
+}
+.article .subject h2{
+    font-size: 36px;
+    line-height: 1.4;
+    text-align: justify;
+    font-weight: bold;
+}
+.article .subject .source{
+    padding-top: 18px;
+}
+.article .subject .source span{
+    padding-right: 10px;
+    font-size: 14px;
+    color: #666666;
+}
+.article .articleMain{
+    position: relative;
+}
+
+.article .articleMain .shareBig{
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.article .articleMain .content{
+    font-size: 18px;
+    line-height: 36px;
+    text-align: justify;
+}
+.article .articleMain .content img{
+    max-width: 100%;
+}
+.article .articleMain .content .editor{
+    padding-top: 40px;
+    text-align: right;
+}
+.article .articleMain .content .keywords{
+    padding-top: 40px;
+}
+.article .articleMain .content .keywords strong{
+    font-weight: normal;
+}
+.article .articleMain .position{
+    position: absolute;
+    right: -57px;
+    top: 0;
+    width: 34px;
+}
+.article .articleMain .position > a{
+    display: block;
+    font-size: 20px;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    text-align: center;
+    color: #828282;
+    margin-bottom: 6px;
+}
+
+.aboutLinks{
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+.aboutLinks .title{
+    margin-bottom: 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+.aboutLinks ul{
+    background-color: #fafafa;
+    padding-left: 22px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.aboutLinks ul li{
+    padding: 30px 15px 20px 0;
+    border-top: 1px solid #dcdcdc;
+}
+.aboutLinks ul li:first-child{
+    border-top:none;
+}
+.aboutLinks ul li h2{
+    padding-bottom: 10px;
+}
+.aboutLinks ul li h2 a{
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+}
+.aboutLinks ul li h2 a:hover{
+    text-decoration: underline;
+}
+.aboutLinks ul li p{
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+}
+.aboutLinks ul li div{
+    text-align: right;
+    padding-top: 20px;
+}
+
+.wrapper .aside .title{
+    background-color: #f0f0f0;
+}
+.wrapper .aside .title .left a{
+    border-left: none;
+    background: none;
+    color: #333;
+    font-size: 18px;
+}
+.wrapper .aside .title .left a .cnrfont{
+    color: #bb0511;
+    vertical-align: text-bottom;
+}
+
+
+
+/*分享自定义样式small*/
+.article .position .shareSmall{}
+.article .position .bdsharebuttonbox.bdshare-button-style0-32{font-size: 0;}
+.article .position .bdsharebuttonbox.bdshare-button-style0-32 a{border: 1px solid #fff; margin:0px 0px 6px;}
+
+
+/*本页翻页样式*/
+.pagination .paginationMain{width: 100%;}

@@ -1,0 +1,620 @@
+/*固定化区块样式如：整站footer，整站翻页组件，整站title*/
+a:hover{text-decoration: none;}
+/*整站footer*/
+#footer{
+    border-top: 1px solid #dcdcdc;
+    background-color: #fafafa;
+}
+#footer .friendLinks{
+    text-align: center;
+    margin: 0 20px;
+    padding-top: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+#footer .friendLinks ul{
+    font-size: 0;
+}
+#footer .friendLinks li{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 0;
+    padding: 10px 14px;
+    height: 14px;
+}
+#footer .friendLinks a{
+    color: #000;
+    font-size: 14px;
+}
+#footer .friendLinks a:hover{
+    text-decoration: underline;
+}
+#footer .info{
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+#footer .info.w1200{
+    width: 1160px;
+}
+#footer .info > div{
+    float: left;
+}
+#footer .info .footerLeft img{
+    display: block;
+    margin-top: 3px;
+    margin-right: 20px;
+}
+#footer .info .footerLeft a{
+    display: inline-block;
+    *display:inline;
+    *zoom: 1;
+}
+#footer .info .footerCenter{
+    text-align: left;
+}
+#footer .info .footerCenter p{
+    color: #666666;
+    font-size: 12px;
+    line-height: 1;
+    padding-top: 10px;
+}
+#footer .info .footerCenter p:first-child{
+    padding-top: 0;
+}
+#footer .info .footerCenter p a{
+    color: #666666;
+}
+#footer .info .footerCenter p a:hover{
+    text-decoration: underline;
+}
+#footer .info .footerRight{
+    float: right;
+    font-size: 0;
+    padding-top: 10px;
+    margin-left: 30px;
+}
+#footer .info .footerRight a{
+    display: inline-block;
+    *display:inline;
+    *zoom: 1;
+    margin-right: 10px;
+}
+#footer .info .footerRight .hd315{
+    background: url("../images/hd315.png") no-repeat;
+    width: 35px;
+    height: 37px;
+}
+#footer .info .footerRight .beian{
+    background: url("../images/beian.png") no-repeat;
+    width: 34px;
+    height: 37px;
+}
+#footer .info .copyright{
+    display: none;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #fff;
+}
+
+
+/*主页中所有标题栏*/
+.wrapper .title{
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+.wrapper .title .left{
+    float: left;
+    font-size: 0;
+    display: block;
+}
+.wrapper .title .left a{
+    border-left: 4px solid #bb0511;
+    background-color: #fff0f0;
+    font-size: 22px;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    color: #bb0511;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.wrapper .title .left a b{
+    color: #bb0511;
+}
+.wrapper .title .left a.disabled{
+    border-left-color: #cdcdcd;
+    color: #cdcdcd;
+    background-color: #fff;
+}
+.wrapper .title .left a.disabled b{
+    color: #cdcdcd;
+}
+.wrapper .title .left a i{
+    padding: 0 5px 0 10px;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight:normal;
+}
+.wrapper .title .right{
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    font-size: 0;
+    height: 16px;
+}
+.wrapper .title .right i{
+    color: #999999;
+    font-size: 12px;
+}
+.wrapper .title .right a{
+    color: #202020;
+    font-size: 16px;
+    line-height: 16px;
+    height: 16px;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    margin-left: 10px;
+}
+
+/*整站图片缩放*/
+.scale{
+    overflow: hidden;
+}
+.scale img{
+    -webkit-transition: transform 0.25s ease-out 0s;
+    -moz-transition: transform 0.25s ease-out 0s;
+    transition: transform 0.25s ease-out 0s;
+}
+.scale:hover img{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+/*整站视频缩放*/
+.video .play{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url("../images/play.png") no-repeat;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+.video, .pic{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.video em, .pic em{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
+    padding: 10px;
+    background-color: rgba(0,0,0,.7);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#B2000000',endColorstr='#B2000000');
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/*整站的topLine*/
+.topLine{
+    width: 100%;
+    height: 40px;
+    background-color: #202020;
+}
+.topLine .topLineInner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.topLine .topLineInner .left{
+    float: left;
+}
+.topLine .topLineInner .left h1{
+    float: left;
+    height: 40px;
+}
+.topLine .topLineInner .left h1 a.logoBig{
+    display: block;
+    background: url("../images/logo_s_red.png") no-repeat center;
+    width: 74px;
+    height: 34px;
+    padding: 3px 10px;
+}
+.topLine .topLineInner .left h1 a.logoSmall{
+    display: none;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+}
+.topLine .topLineInner .left .nav{
+    float: left;
+    margin-left: 20px;
+}
+.topLine .topLineInner .left .nav li{
+    line-height: 40px;
+    height: 40px;
+    float: left;
+    margin-left: 20px;
+}
+.topLine .topLineInner .left .nav li:first-child{
+    margin-left: 0;
+}
+.topLine .topLineInner .left .nav li a{
+    display: block;
+    letter-spacing: 2px;
+    padding-left: 2px;
+    color:#c8c8c8;
+    line-height: 40px;
+    font-size: 14px;
+}
+.topLine .topLineInner .left .nav li a:hover, .topLine .topLineInner .left .nav li a:focus{
+    color: #ffffff;
+    background:none;
+}
+.topLine .topLineInner .right{
+    float: right;
+}
+.topLine .topLineInner .right .subNav > li{
+    float: right;
+    width: 38px;
+    border-right: 1px solid #282828;
+    border-left: 1px solid #202020;
+    height: 40px;
+    line-height: 40px;
+}
+.topLine .topLineInner .right .subNav > li.sites{
+    position: relative;
+    width: 100px;
+    z-index: 999;
+}
+.topLine .topLineInner .right .subNav > li a{
+    display: block;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    color: #828282;
+    font-size: 24px;
+}
+.topLine .topLineInner .right .subNav > li.sites a{
+    position: relative;
+    font-size: 14px;
+    color: #c8c8c8;
+}
+.topLine .topLineInner .right .subNav > li.sites a.active{
+    color: #fff;
+    background-color:#bb0511;
+}
+.topLine .topLineInner .right .subNav > li.sites a.active i{
+    border-top-color:#fff;
+}
+.topLine .topLineInner .right .subNav > li a.cnrfont:hover{
+    background-color: #3c3c3c;
+    color: #b4b4b4;
+}
+.topLine .topLineInner .right .subNav li.subNav_menu{
+    display: none;
+}
+.topLine .topLineInner .right .subNav li.subNav_menu .subNav_menu_sub{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 40px;
+    background-color: #3c3c3c;
+    z-index: 1;
+    display: none;
+}
+.topLine .topLineInner .right .subNav li.subNav_menu .subNav_menu_sub a{
+    position: relative;
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    font-size: 14px;
+    width: 20%;
+}
+.topLine .topLineInner .right .subNav li.subNav_menu .subNav_menu_sub a:before{
+    content: "|";
+    position: absolute;
+    right: 0;
+}
+.topLine .topLineInner .right .subNav li.subNav_menu .subNav_menu_sub a:nth-of-type(5n):before{
+    content: "";
+}
+.topLine .topLineInner .right .subNav li.sites i{
+    position: absolute;
+    left:50%;
+    bottom:5px;
+    width: 0;
+    height: 0;
+    overflow:hidden;
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+    border-top:4px solid #828282;
+    _border-left:4px solid #202020;
+    _border-right:4px solid #202020;
+    cursor: pointer;
+    margin-left: -2px;
+}
+.topLine .topLineInner .right .subNav li.sites ul{
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    background-color: #000000;
+}
+.topLine .topLineInner .right .subNav li.sites ul li{
+    height: 32px;
+    line-height: 32px;
+}
+.topLine .topLineInner .right .subNav li.sites ul a{
+    line-height: 32px;
+    height: 32px;
+}
+.topLine .topLineInner .right .subNav li.sites ul a:hover{
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+/*整站的面包屑导航*/
+.breadcrumb{font-size: 0;}
+.breadcrumb li{
+    font-size: 16px;
+    line-height: 1;
+    color: #666666;
+    padding-left: 5px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.breadcrumb li:first-child{
+    padding-left: 0;
+}
+.breadcrumb li a{
+    font-size: 16px;
+    line-height: 1;
+    color: #666666;
+    padding-right: 5px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+
+
+
+
+/*评论样式
+.comments{
+    padding-bottom: 40px;
+}
+.comments .commentInfo{
+    position: relative;
+    font-size: 0;
+    margin-bottom: 15px;
+    height: 24px;
+}
+.comments .commentInfo .left{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.comments .commentInfo .left span{
+    padding-right: 8px;
+    font-size: 18px;
+    color: #333333;
+}
+.comments .commentInfo .left i{
+    cursor:default;
+    color: #bb0511;
+}
+.comments .commentInfo .left em{
+    padding-left: 20px;
+    font-size: 14px;
+    color:#666666
+}
+.comments .commentInfo .right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.comments .commentInfo .right span{
+    font-size: 14px;
+    color: #333333;
+}
+.comments .commentInfo .right span:first-child{
+    padding-right: 25px;
+}
+.comments .commentInfo .right span b{
+    font-size: 24px;
+    color: #bb0511;
+    font-weight: normal;
+}
+.comments .commentOuter{
+    position: relative;
+    border: 1px solid #bb0511;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.comments .commentOuter .left{
+    float: left;
+    width: 80%;
+}
+.comments .commentOuter .right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+}
+.comments .commentOuter .commentBar{
+    font-size: 0;
+    background-color: #fff0f0;
+    padding: 0px 0 10px 20px;
+}
+.comments .commentOuter .commentBar span{
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    font-size: 16px;
+    line-height: 16px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.comments .commentOuter .commentBar input{
+    margin-left: 5px;
+    border: none;
+}
+.comments .commentOuter .commentBar input.nick{
+    width: 80px;
+}
+.comments .commentOuter .commentBar input.tel{
+    width: 120px;
+}
+.comments .commentOuter .commentBar input.verification{
+    width: 64px;
+}
+.comments .commentOuter input:focus, .commentOuter button:focus, .commentOuter textarea:focus{
+    outline: none;
+}
+.comments .commentOuter .commentBar button.btnCode{
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 21px;
+    height: 21px;
+    padding: 0 10px;
+    border: none;
+    color: #fff;
+    background-color: #bb0511;
+    cursor: pointer;
+    margin-top: 10px;
+    vertical-align: bottom;
+}
+.comments .commentOuter .right button.publish{
+    border: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #bb0511;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.comments .commentOuter textarea{
+    font-size: 14px;
+    line-height: 1.2;
+    resize: none;
+    border: none;
+    height: 64px;
+    width: 96%;
+    padding: 2%;
+}
+.comments .warn{
+    margin-top: 15px;
+    color: #bb0511;
+    font-size: 14px;
+    line-height: 1;
+}
+*/
+
+
+
+/*整站翻页*/
+.pagination {
+    margin-top: 30px;
+    height: 60px;
+}
+
+.pagination a {
+    display: inline-block;
+    *display: block;
+    *zoom:1;
+    padding:0 0.5em;
+    text-decoration: none;
+    border: solid 1px #dcdcdc;
+    color: #a0a0a0;
+    height: 58px;
+    line-height: 58px;
+    border-radius: 5px;
+}
+
+.pagination span{
+    display: inline-block;
+    *display: block;
+    *zoom:1;
+    padding: 0 0.5em;
+    height: 58px;
+    line-height: 58px;
+    color: #000;
+}
+
+.pagination .prev{
+    float: left;
+}
+.pagination .next{
+    float: right;
+}
+.pagination .paginationMain{
+    text-align: center;
+    width: 78%;
+    float: left;
+}
+.pagination .paginationGoto{
+    float: right;
+    overflow: hidden;
+    width: 20%;
+    text-align: right;
+}
+.pagination .paginationGoto input[type="text"]{
+    border:1px solid #dcdcdc;
+    border-right: 0;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 9px 0 0 9px;
+    padding: 15px 5%;
+    width: 50%;
+}
+.pagination .paginationGoto input[type="text"]:focus{
+    outline: none;
+}
+.pagination .paginationGoto button{
+    height: 60px;
+    width: 38%;
+    line-height: 60px;
+    background-color: #e60012;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    vertical-align: top;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+}
+
+@media (max-width: 768px) {
+	.topLine .topLineInner .left h1 a.logoBig{
+		display: block;
+		background: url("../images/logo_s_red_1.png") no-repeat center;
+		width: 74px;
+		height: 34px;
+		padding: 3px 10px;
+		background-size: contain; 
+	}
+}

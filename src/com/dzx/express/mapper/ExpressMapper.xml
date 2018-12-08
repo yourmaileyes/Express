@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dzx.express.mapper.ExpressMapper" >
+  <resultMap id="BaseResultMap" type="com.dzx.express.entity.Express" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="fromlocation" property="fromlocation" jdbcType="VARCHAR" />
+    <result column="tolocation" property="tolocation" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="posttime" property="posttime" jdbcType="TIMESTAMP" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, fromlocation, tolocation, phone, posttime, type
+  </sql>
+  <select id="selectall" resultMap="BaseResultMap" parameterType="java.lang.String">
+  select * from express where fromlocation like concat(#{0},'%') or tolocation like concat(#{0},'%')
+  </select>
+  <select id="selectbyphone" resultMap="BaseResultMap" parameterType="java.lang.String" >
+  select * from express
+  where phone = #{phone}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from express
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from express
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.dzx.express.entity.Express" >
+    insert into express (id, fromlocation, tolocation, 
+      phone, posttime, type
+      )
+    values (#{id,jdbcType=VARCHAR}, #{fromlocation,jdbcType=VARCHAR}, #{tolocation,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{posttime,jdbcType=TIMESTAMP}, #{type,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.dzx.express.entity.Express" >
+    insert into express
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="fromlocation != null" >
+        fromlocation,
+      </if>
+      <if test="tolocation != null" >
+        tolocation,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="posttime != null" >
+        posttime,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="fromlocation != null" >
+        #{fromlocation,jdbcType=VARCHAR},
+      </if>
+      <if test="tolocation != null" >
+        #{tolocation,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="posttime != null" >
+        #{posttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dzx.express.entity.Express" >
+    update express
+    <set >
+      <if test="fromlocation != null" >
+        fromlocation = #{fromlocation,jdbcType=VARCHAR},
+      </if>
+      <if test="tolocation != null" >
+        tolocation = #{tolocation,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="posttime != null" >
+        posttime = #{posttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dzx.express.entity.Express" >
+    update express
+    set fromlocation = #{fromlocation,jdbcType=VARCHAR},
+      tolocation = #{tolocation,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      posttime = #{posttime,jdbcType=TIMESTAMP},
+      type = #{type,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
