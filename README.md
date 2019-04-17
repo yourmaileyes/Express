@@ -40,3 +40,11 @@ sql编码为utf-8
 一个物流完整操作流程：下订单》仓库派出快递员进行揽件》快递员登录系统进行揽收完成操作》
 仓库进行入库》仓库出库操作》另一仓库进行入库操作》另一仓库快递员进行出库投递操作》
 另一仓库快递员进行签收操作》客户进行收货操作。
+
+![Image text](https://github.com/yourmaileyes/ImageRepositry/blob/master/ExpressManager/index.png)
+![Image text](https://github.com/yourmaileyes/ImageRepositry/blob/master/ExpressManager/微信图片_20190417160518.png)
+![Image text](https://github.com/yourmaileyes/ImageRepositry/blob/master/ExpressManager/微信图片_20190417160522.png)
+![Image text](https://github.com/yourmaileyes/ImageRepositry/blob/master/ExpressManager/微信图片_20190417160525.png)
+![Image text](https://github.com/yourmaileyes/ImageRepositry/blob/master/ExpressManager/微信图片_20190417160528.png)
+![Image text](https://github.com/yourmaileyes/ImageRepositry/blob/master/ExpressManager/微信图片_20190417160531.png)
+![Image text](https://github.com/yourmaileyes/ImageRepositry/blob/master/ExpressManager/微信图片_20190417160533.png)
