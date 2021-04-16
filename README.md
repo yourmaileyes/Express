@@ -6,7 +6,8 @@
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 <br>
-
+更多项目请访问我的仓库:https://github.com/yourmaileyes?tab=repositories<br>
+承接原生开发项目<br>
 使用方法
 更改applicationContext.xml中的数据库链接的账户密码
 sql编码为utf-8
